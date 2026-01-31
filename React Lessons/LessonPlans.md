@@ -1,19 +1,19 @@
 # OVERVIEW OF LESSONS
 
 <ol>
-<li>JSX & expressions ✔️ (current) - INTRO
+<li>JSX & expressions ✔️ (current) - <b>INTRO</b>
 
-<li>State (useState) patterns - Lesson 1
+<li>State (useState) patterns - <b>Lesson 1</b>
 
-<li>Conditional rendering (clean vs messy)
+<li>Conditional rendering (clean vs messy) - <b>Lesson 2</b>
 
-<li>Lists & map
+<li>Lists & map - <b>Lesson 3</b>
 
-<li>Events & handlers (proper patterns)
+<li>Controlled forms - <b>Lesson 4</b>
 
-<li>Controlled forms
+<li>Component boundaries - <b>Lesson 5</b>
 
-<li>Component boundaries
+<li>Events & handlers (proper patterns) - <b>Lesson 6</b>
 
 <li>useEffect (when it’s actually needed)
 

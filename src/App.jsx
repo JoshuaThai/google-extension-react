@@ -14,9 +14,17 @@ function Counter(){
   const [count, setCount] = useState(0) // → [currentStateValue, stateUpdaterFunction]
   // stateArray[0] → current value
   // stateArray[1] → function to update it
+  const courses = ["Algorithms", "Databases", "Operating Systems"];
   return (
     <div>
+      <ul>
+        {courses.map((course, index) => (
+          <li key={index}>{course}</li>
+        ))}
+      </ul>
+      <hr />
       <p>Count: {count}</p>
+      <p>Counter is {count % 2 == 0 ? "even" : "odd"}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   )
