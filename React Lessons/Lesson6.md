@@ -1,4 +1,4 @@
-# Events and Handlers
+# Lesson 6 - Events and Handlers
 
 ## What counts as “events & handlers” in React
 

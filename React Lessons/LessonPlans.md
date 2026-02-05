@@ -15,7 +15,7 @@
 
 <li>Events & handlers (proper patterns) - <b>Lesson 6</b>
 
-<li>useEffect (when it’s actually needed)
+<li>useEffect (when it’s actually needed) - <b>Lesson 7</b>
 
 <li>Basic data flow patterns
 
