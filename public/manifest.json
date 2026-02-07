@@ -3,7 +3,19 @@
   "description": "A React-powered Chrome Extension",
   "version": "1.0",
   "manifest_version": 3,
+
+  "permissions": [
+    "sidePanel"
+  ],
   "action": {
-    "default_popup": "index.html"
+    "default_title": "Open side panel"
+  },
+
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
   }
 }

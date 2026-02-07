@@ -1,0 +1,9 @@
+  // "action": {
+  //   "default_popup": "index.html"
+  // },
+  //   "permissions": [
+  //   "windows" 
+  // ],
+  // "background": {
+  //   "service_worker": "./background.js"
+  // }
