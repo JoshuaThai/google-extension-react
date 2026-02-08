@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -24,4 +25,16 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 // const analytics = getAnalytics(app);
+
+// function addUserData(email, password) {
+//    try {
+//     const userCredential = auth.createUserWithEmailAndPassword(email, password);
+//     const user = userCredential.user;
+//     console.log("User signed up:", user);
+//     // Redirects user to home page after signing up
+//     window.location.replace("home.html");
+//   } catch (error) {
+//     console.error("Error signing up:", error);
+//   }
+// }
 

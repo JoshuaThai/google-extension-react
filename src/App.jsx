@@ -71,14 +71,5 @@ function App() {
   );
 }
 
-function Login(){
-  return (
-    <div>
-      <Header title="Login Page" />
-      <hr />
-      <p>Login functionality coming soon...</p>
-    </div>
-  )
-}
 
 export default App;

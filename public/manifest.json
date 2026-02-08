@@ -5,7 +5,8 @@
   "manifest_version": 3,
 
   "permissions": [
-    "sidePanel"
+    "sidePanel",
+    "tabs"
   ],
   "action": {
     "default_title": "Open side panel"
