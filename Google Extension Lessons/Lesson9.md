@@ -78,12 +78,19 @@ In `manifest.json`, add:
 Then in `background.js`, change your listener:
 
 ```
-chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
-if (message.type === "GET_ACTIVE_TAB_URL") {
-const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-sendResponse({ url: tab?.url ?? null });
-}
-return true;
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message?.type === "GET_ACTIVE_TAB_URL") {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const tab = tabs?.[0];
+      console.log("SW got tab:", tab);
+      sendResponse({ url: tab?.url ?? null });
+    });
+
+    return true; // ✅ IMPORTANT: returned synchronously
+  }
+
+  sendResponse({ error: "Unknown type", got: message });
+  return false;
 });
 ```
 
