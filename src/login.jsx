@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 // import { addUserData } from "./firestore.js";
 import { auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { House } from 'lucide-react';
 import './App.css'
 
 function SignIn(){
@@ -45,6 +46,9 @@ function Header(props){
 function Login(){
   return (
     <div>
+      <div id="menu">
+        <House />
+      </div>
       <Header title="Login Page" />
       <hr />
       <SignIn />
