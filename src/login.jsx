@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 // import { addUserData } from "./firestore.js";
 import { auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+// Import Lucide icons
 import { House } from 'lucide-react';
 import './App.css'
 
