@@ -5,7 +5,7 @@ import viteLogo from '/vite.svg'
 import { auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 // Import Lucide icons
-import { House } from 'lucide-react';
+import { House, Users, CirclePlus, Settings, Mail } from 'lucide-react';
 import './App.css'
 
 function SignIn(){
@@ -47,8 +47,23 @@ function Header(props){
 function Login(){
   return (
     <div>
+      {/* We need to break the menu into its own component and subcomponents */}
       <div id="menu">
-        <House />
+        <button id="home-btn" title="Home">
+          <House />
+          </button>
+          <button id="users-btn" title="Friends">
+            <Users />
+            </button>
+            <button id="add-btn" title="Add Habits">
+              <CirclePlus />
+              </button>
+              <button id="mail-btn" title="Messages">
+                <Mail />
+                </button>
+              <button id="settings-btn" title="Settings">
+                <Settings />
+                </button>
       </div>
       <Header title="Login Page" />
       <hr />
