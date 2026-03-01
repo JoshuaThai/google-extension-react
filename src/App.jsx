@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import { auth } from "./firebase";
+import HabitCreate from "./habitCreate.jsx";
 import './App.css'
+
+import EmojiSelect from "./EmojiSelect.jsx";
 
 function Header(props){
   return <h1>{props.title}</h1>
@@ -55,6 +58,17 @@ function User(){
   )
 }
 
+function HabitForm() {
+  const [emoji, setEmoji] = useState("🏃‍♂️");
+
+  return (
+    <div>
+      <label>Habit emoji:</label>
+      <EmojiSelect value={emoji} onChange={setEmoji} />
+    </div>
+  );
+}
+
 function App() {
   return (
     <div>
@@ -67,6 +81,9 @@ function App() {
       <Counter />
       <hr />
       <Display />
+      <hr />
+      <HabitForm />
+      <HabitCreate />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 // Import Lucide icons
 import { House, Users, CirclePlus, Settings, Mail } from 'lucide-react';
+import Calendar from "./calendar.jsx";
 import './App.css'
 
 function SignIn(){
@@ -32,8 +33,14 @@ function SignIn(){
 
   return (
     <div>
-      <input type="text" id='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" id='password' placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <input type="text" id='email' placeholder="Email" 
+      value={email} onChange={(e) => setEmail(e.target.value)} />
+      <br />
+      <br />
+      <input type="password" id='password' placeholder="Password" 
+      value={password} onChange={(e) => setPassword(e.target.value)} />
+      <br />
+      <br />
       <button id='signup' onClick={handleSignUp}>Sign Up</button>
       {errorMsg && <p style={{color: "red"}}>{errorMsg}</p>}
     </div>
@@ -46,7 +53,13 @@ function Header(props){
 
 function Login(){
   return (
-    <div>
+    <div id ="login-container">
+      <header id="header">
+        <img src={reactLogo} className="logo" alt="React Logo" />
+        {/* <h1>Habit.lio</h1> */}
+      </header>
+      <h1>Habit.lio</h1>
+      <p>Ready to transform your life with better habits? Sign up today🔥🔥</p>
       {/* We need to break the menu into its own component and subcomponents */}
       <div id="menu">
         <button id="home-btn" title="Home">
@@ -65,12 +78,14 @@ function Login(){
                 <Settings />
                 </button>
       </div>
-      <Header title="Login Page" />
+      <Calendar />
+      <Header title="Sign Up" />
       <hr />
       <SignIn />
     </div>
   )
 }
+
 
 
 export default Login;
